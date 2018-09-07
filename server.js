@@ -1,5 +1,12 @@
 const express = require('express');
 // http://handlebarsjs.com/
+// Win Powershell command to access enviroment variables:
+// Get-ChildItem Env:
+// gitbash command to access enviroment variables:
+// env
+
+const port = process.env.PORT || 3000;
+
 const hbs = require('hbs');
 const fs = require('fs');
 
@@ -69,7 +76,7 @@ app.get('/bad', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log('Server is up on http://127.0.0.1:3000')
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}`);
 });
 
