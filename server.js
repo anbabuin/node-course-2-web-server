@@ -5,6 +5,8 @@ const express = require('express');
 // gitbash command to access enviroment variables:
 // env
 
+
+//used in heroku
 const port = process.env.PORT || 3000;
 
 const hbs = require('hbs');
